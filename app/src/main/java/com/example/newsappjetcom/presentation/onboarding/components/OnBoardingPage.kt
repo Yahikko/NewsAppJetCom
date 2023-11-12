@@ -18,8 +18,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.newsappjetcom.R
-import com.example.newsappjetcom.presentation.Dimens.MediumPadding1
-import com.example.newsappjetcom.presentation.Dimens.MediumPadding2
+import com.example.newsappjetcom.presentation.Dimens.SmallFraction1
+import com.example.newsappjetcom.presentation.Dimens.SmallPadding1
+import com.example.newsappjetcom.presentation.Dimens.SmallPadding2
 import com.example.newsappjetcom.presentation.onboarding.Page
 import com.example.newsappjetcom.presentation.onboarding.pages
 import com.example.newsappjetcom.ui.theme.NewsAppJetComTheme
@@ -34,24 +35,24 @@ fun OnBoardingPage(
         Image(
             modifier = Modifier
                 .fillMaxWidth()
-                .fillMaxHeight(fraction = 0.6f),
+                .fillMaxHeight(fraction = SmallFraction1),
             painter = painterResource(id = page.image),
             contentDescription = null,
             contentScale = ContentScale.Crop
         )
 
-        Spacer(modifier = Modifier.height(MediumPadding1))
+        Spacer(modifier = Modifier.height(SmallPadding1))
 
         Text(
             text = page.title,
-            modifier = Modifier.padding(horizontal = MediumPadding2),
+            modifier = Modifier.padding(horizontal = SmallPadding2),
             style = MaterialTheme.typography.displaySmall.copy(fontWeight = FontWeight.Bold),
             color = colorResource(id = R.color.display_small)
         )
 
         Text(
             text = page.description,
-            modifier = Modifier.padding(horizontal = MediumPadding2),
+            modifier = Modifier.padding(horizontal = SmallPadding2),
             style = MaterialTheme.typography.bodyMedium,
             color = colorResource(id = R.color.text_medium)
         )
